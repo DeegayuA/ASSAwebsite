@@ -140,6 +140,7 @@ p + p {
 .card-info * {
   position: relative;
   z-index: 1;
+  text-transform: uppercase;
 }
 .card-info:after {
   content: "";
