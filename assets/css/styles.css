@@ -1202,3 +1202,20 @@ button:hover .button-text {
     margin: 0 1rem;
   }
 }
+
+/* membership.html video element START */
+.video-section{
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  overflow: hidden;
+}
+
+video{
+  width: 50%;
+  height: fit-content;
+  -moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius:20px;
+}
+/* membership.html video element END */
