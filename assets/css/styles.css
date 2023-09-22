@@ -1030,7 +1030,7 @@ input[type="file"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: var(--mb-1);
+  margin: var(--mb-2);
 }
 button {
   position: relative;
