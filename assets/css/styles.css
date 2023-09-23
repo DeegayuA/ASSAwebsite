@@ -1204,18 +1204,23 @@ button:hover .button-text {
 }
 
 /* membership.html video element START */
-.video-section{
+.video-section {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding-top: 1rem;
   overflow: hidden;
 }
 
-video{
+video {
   width: 50%;
-  height: fit-content;
-  -moz-border-radius:20px;
-	-webkit-border-radius:20px;
-	border-radius:20px;
+  height: auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
 }
+
 /* membership.html video element END */
