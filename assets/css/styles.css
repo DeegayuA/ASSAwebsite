@@ -490,7 +490,7 @@ nav ul li a:hover {
 }
 
 #nav:checked+.nav-open i:nth-child(1) {
-  transform: translateY(6px) rotate(180deg);
+  transform: translateY(7px) rotate(180deg);
 }
 
 #nav:checked+.nav-open i:nth-child(2) {
@@ -498,7 +498,7 @@ nav ul li a:hover {
 }
 
 #nav:checked+.nav-open i:nth-child(3) {
-  transform: translateY(-6px) rotate(90deg);
+  transform: translateY(-7px) rotate(90deg);
 }
 
 #nav:checked~.nav-container {
