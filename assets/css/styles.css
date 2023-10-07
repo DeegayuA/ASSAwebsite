@@ -860,7 +860,7 @@ nav ul li a:hover {
   top: 0;
   z-index: -10;
   filter: blur(2px) saturate(200%) brightness(200%) contrast(200%);
-  webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--header-color);
 }
