@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,900&display=swap");
 /*===== Dark mode and light mode ===== */
-@media (prefers-color-scheme: dark) {
+/*===== colors =====*/
+
+/* @media (prefers-color-scheme: dark) {
   :root {
-    /*===== colors =====*/
+    
     --header-color: #ffffff;
     --text-color: #cacaca;
     --main-color: #83adeb;
@@ -15,7 +17,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    /*===== colors =====*/
+    
     --header-color: #272727;
     --text-color: #555555;
     --main-color: #092880;
@@ -24,10 +26,19 @@
     --bg2-color: #afafaf;
     --bg-transperant-color: #f1f1f1a4;
   }
-}
+} */
 
 /*===== VARIABLES CSS =====*/
 :root {
+   /*===== colors =====*/
+   --header-color: #ffffff;
+   --text-color: #cacaca;
+   --main-color: #83adeb;
+   --second-color: #4778c2;
+   --bg-color: #0a1224;
+   --bg2-color: #0e1b35;
+   --bg-transperant-color: #0e1b35bb;
+   
   /*===== z index =====*/
   --z-back: -10;
   --z-normal: 1;
