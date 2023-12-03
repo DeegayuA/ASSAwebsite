@@ -29,8 +29,32 @@
             box-shadow: 0px 0px 13px var(--main-color);
         }
 
-        .disabled-link {
-            pointer-events: none;
+        .expiredButton {
+            background: rgb(234,31,31);
+            animation: btnGlow 3s ease-in infinite;
+        }
+
+        @keyframes btnGlow {
+            0%   {
+                box-shadow: 0px 0px 10px rgb(234,31,31);
+                letter-spacing: 0.2ch;
+            }
+            25%  {
+                box-shadow: 0px 0px 20px rgb(234,31,31);
+                letter-spacing: 0.5ch;
+            }
+            50%  {
+                box-shadow: 0px 0px 25px rgb(234,31,31);
+                letter-spacing: 0.8ch;
+            }
+            75%  {
+                box-shadow: 0px 0px 20px rgb(234,31,31);
+                letter-spacing: 0.5ch;
+            }
+            100% {
+                box-shadow: 0px 0px 10px rgb(234,31,31);
+                letter-spacing: 0.2ch;
+            }
         }
     </style>
 </head>
@@ -85,7 +109,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="article-content">
+                <div class="article-content" id="article-content">
                     <h1>ASSA LAPTOP SLEEVE</h1>
                     <div class="article-date">October 07, 2023</div>
                     <p style="text-align: center;"><br>
@@ -189,7 +213,10 @@
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("timer").innerHTML = "EXPIRED";
-                orderFormLink.classList.add('disabled-link');
+                document.getElementById("timer").classList.add('expiredButton');
+                // orderFormLink.classList.add('disabled-link');
+                // timer.style.backgroundColor = 'linear-gradient(45deg, rgba(234, 31, 31, 0.85) 14%, rgba(230, 226, 44, 0.850945480731355) 50%, rgba(234, 31, 31, 0.85) 80%)';
+                document.getElementById("article-content").removeChild(orderFormLink);
             }
         }, 1000);
     </script>
