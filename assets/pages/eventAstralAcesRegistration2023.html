@@ -31,10 +31,15 @@
 
         .expiredButton {
             background: rgb(234, 31, 31);
-            animation: btnGlow 3s ease-in infinite;
+            animation: btnGlowClose 3s ease-in infinite;
         }
 
-        @keyframes btnGlow {
+        .openButton {
+            background: rgb(16, 187, 27);
+            animation: btnGlowOpen 3s ease-in infinite;
+        }
+
+        @keyframes btnGlowClose {
             0% {
                 box-shadow: 0px 0px 10px rgb(234, 31, 31);
                 letter-spacing: 0.2ch;
@@ -58,6 +63,28 @@
             100% {
                 box-shadow: 0px 0px 10px rgb(234, 31, 31);
                 letter-spacing: 0.2ch;
+            }
+        }
+
+        @keyframes btnGlowOpen {
+            0% {
+                box-shadow: 0px 0px 10px rgb(16, 187, 27);
+            }
+
+            25% {
+                box-shadow: 0px 0px 20px rgb(16, 187, 27);
+            }
+
+            50% {
+                box-shadow: 0px 0px 25px rgb(16, 187, 27);
+            }
+
+            75% {
+                box-shadow: 0px 0px 20px rgb(16, 187, 27);
+            }
+
+            100% {
+                box-shadow: 0px 0px 10px rgb(16, 187, 27);
             }
         }
     </style>
@@ -189,7 +216,9 @@
             } else {
                 checkingDate = countDownDateForOpen;
                 status = "OpenDate";
-
+                if (!document.getElementById("timer").classList.contains('openButton')) {
+                    document.getElementById("timer").classList.add('openButton');
+                }  
             }
             // Find the distance between now and the count down date
             var distance = checkingDate - now;
@@ -212,9 +241,8 @@
                     document.getElementById("timer").innerHTML = "EXPIRED";
                     document.getElementById("timer").classList.add('expiredButton');
                     document.getElementById("article-content").removeChild(orderFormLink);
-                    console.log("Date Line");
                 } else {
-                    console.log("Opened");
+                    document.getElementById("timer").classList.remove('openButton');
                 }
 
             }
