@@ -10,6 +10,20 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Kelani Astro Wiedza</title>
     <link rel="icon" href="../img/logos/assa.ico">
+    <style>
+        .imgRegistrationClosed{
+            max-width: 50%;
+            animation: imgAnimation 10s ease infinite;
+        }
+        @keyframes imgAnimation {
+            0%,100%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-20px);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -98,8 +112,8 @@
     <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;margin: 1rem;">
            <!-- <h2 class="section-title">Registration Closed</h2> -->
 
-    <img style="border-radius: 1.5rem;max-width: 65%;box-shadow: 0px 0px 15px red;" src="https://www.seekpng.com/png/detail/211-2114157_registration-closed-png.png" alt="Registration Closed Png@seekpng.com">
-
+    <!-- <img style="border-radius: 1.5rem;max-width: 65%;box-shadow: 0px 0px 15px red;" src="https://www.seekpng.com/png/detail/211-2114157_registration-closed-png.png" alt="Registration Closed Png@seekpng.com"> -->
+    <img src="../img/Events/membership/registrationClosed.png" alt="Registration were closed" class="imgRegistrationClosed">
     </div>
  
     <!--===== FOOTER =====-->
