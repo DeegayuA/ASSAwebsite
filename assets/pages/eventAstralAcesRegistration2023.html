@@ -46,27 +46,27 @@
         @keyframes btnGlowClose {
             0% {
                 box-shadow: 0px 0px 10px rgb(234, 31, 31);
-                letter-spacing: 0.2ch;
+                /* letter-spacing: 0.2ch; */
             }
 
             25% {
                 box-shadow: 0px 0px 20px rgb(234, 31, 31);
-                letter-spacing: 0.5ch;
+                /* letter-spacing: 0.5ch; */
             }
 
             50% {
                 box-shadow: 0px 0px 25px rgb(234, 31, 31);
-                letter-spacing: 0.8ch;
+                /* letter-spacing: 0.8ch; */
             }
 
             75% {
                 box-shadow: 0px 0px 20px rgb(234, 31, 31);
-                letter-spacing: 0.5ch;
+                /* letter-spacing: 0.5ch; */
             }
 
             100% {
                 box-shadow: 0px 0px 10px rgb(234, 31, 31);
-                letter-spacing: 0.2ch;
+                /* letter-spacing: 0.2ch; */
             }
         }
 
@@ -188,9 +188,9 @@
                             Caption: Sathini Weerasinghe</i>
                     </p> -->
 
-                    <img src="../img/Events/event_astralAcesRegistration2023/astralAces2023RegistrationFlyer.jpg"
+                    <img src="../img/Events/event_astralAcesRegistration2023/astralAces2023RegistrationFlyerV2.jpg"
                         alt="astralAcesRegistration2023"
-                        style="-webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;" />
+                        style="-webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;box-shadow: 0px 0px 10px #83adeb;" />
                 </div>
             </div>
         </div>
@@ -235,7 +235,11 @@
             if (now > countDownDateForOpen) {
                 checkingDate = countDownDateForClose;
                 status = "CloseDate";
-                txtLinkOpenTimer.innerHTML = "Hurry up and grab yours‼😌";
+                // txtLinkOpenTimer.innerHTML = "Hurry up and grab yours‼😌";
+                if (document.getElementById("txtLinkOpenTimer")) {
+                    document.getElementById("article-content").removeChild(txtLinkOpenTimer);
+                }
+                
                 if (document.getElementById('orderFormLink').style.visibility='hidden') {
                     document.getElementById('orderFormLink').style.visibility = 'visible';
                 }
