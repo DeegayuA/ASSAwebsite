@@ -12,7 +12,6 @@
     <link rel="icon" href="../img/logos/assa.ico">
 
     <style>
-
         .article-content h2 {
             color: var(--text-color);
             text-align: center;
@@ -26,7 +25,7 @@
         }
 
         .expiredButton {
-            background: rgb(234, 31, 31);
+            background: rgb(183, 26, 26);
             animation: btnGlowClose 3s ease-in infinite;
         }
 
@@ -34,79 +33,51 @@
             background: rgb(16, 187, 27);
             animation: btnGlowOpen 3s ease-in infinite;
         }
-        .activeButton{
+
+        .activeButton {
             background: rgb(22, 115, 197);
             animation: btnGlowActive 3s ease-in infinite;
         }
 
         @keyframes btnGlowClose {
-            0% {
-                box-shadow: 0px 0px 10px rgb(234, 31, 31);
-                /* letter-spacing: 0.2ch; */
+            0%,100% {
+                box-shadow: 0px 0px 10px rgb(183, 26, 26);
             }
 
-            25% {
-                box-shadow: 0px 0px 20px rgb(234, 31, 31);
-                /* letter-spacing: 0.5ch; */
+            25%,75% {
+                box-shadow: 0px 0px 20px rgb(183, 26, 26);
             }
 
             50% {
-                box-shadow: 0px 0px 25px rgb(234, 31, 31);
-                /* letter-spacing: 0.8ch; */
-            }
-
-            75% {
-                box-shadow: 0px 0px 20px rgb(234, 31, 31);
-                /* letter-spacing: 0.5ch; */
-            }
-
-            100% {
-                box-shadow: 0px 0px 10px rgb(234, 31, 31);
-                /* letter-spacing: 0.2ch; */
+                box-shadow: 0px 0px 25px rgb(183, 26, 26);
             }
         }
 
         @keyframes btnGlowOpen {
-            0% {
+            0%,100% {
                 box-shadow: 0px 0px 10px rgb(16, 187, 27);
             }
 
-            25% {
+            25%,75% {
                 box-shadow: 0px 0px 20px rgb(16, 187, 27);
             }
 
             50% {
                 box-shadow: 0px 0px 25px rgb(16, 187, 27);
             }
-
-            75% {
-                box-shadow: 0px 0px 20px rgb(16, 187, 27);
-            }
-
-            100% {
-                box-shadow: 0px 0px 10px rgb(16, 187, 27);
-            }
         }
 
         @keyframes btnGlowActive {
-            0% {
+            0%,100% {
                 box-shadow: 0px 0px 10px rgb(22, 115, 197);
             }
 
-            25% {
+            25%,75% {
                 box-shadow: 0px 0px 20px rgb(22, 115, 197);
             }
 
             50% {
                 box-shadow: 0px 0px 25px rgb(22, 115, 197);
-            }
-
-            75% {
-                box-shadow: 0px 0px 20px rgb(22, 115, 197);
-            }
-
-            100% {
-                box-shadow: 0px 0px 10px rgb(22, 115, 197);
             }
         }
     </style>
@@ -170,7 +141,8 @@
                     <h2 id="txtLinkOpenTimer">Just wait a moment!!</h2>
                     <!-- Display the countdown timer in an element -->
                     <h2 class="timer" id="timer"></h2>
-                    <a class="eventLink" id="orderFormLink" href="https://forms.gle/dukgur8HsAK4mCht5" style="visibility: hidden;">
+                    <a class="eventLink" id="orderFormLink" href="https://forms.gle/dukgur8HsAK4mCht5"
+                        style="visibility: hidden;">
                         <h1> Click here to Register</h1>
                     </a>
 
@@ -235,8 +207,8 @@
                 if (document.getElementById("txtLinkOpenTimer")) {
                     document.getElementById("article-content").removeChild(txtLinkOpenTimer);
                 }
-                
-                if (document.getElementById('orderFormLink').style.visibility='hidden') {
+
+                if (document.getElementById('orderFormLink').style.visibility = 'hidden') {
                     document.getElementById('orderFormLink').style.visibility = 'visible';
                 }
                 if (!document.getElementById("timer").classList.contains('activeButton')) {
@@ -247,7 +219,7 @@
                 status = "OpenDate";
                 if (!document.getElementById("timer").classList.contains('openButton')) {
                     document.getElementById("timer").classList.add('openButton');
-                }  
+                }
             }
             // Find the distance between now and the count down date
             var distance = checkingDate - now;
@@ -268,6 +240,12 @@
                 if (status == "CloseDate") {
 
                     document.getElementById("timer").innerHTML = "Registration Closed";
+                    if (document.getElementById("timer").classList.contains('activeButton')) {
+                        document.getElementById("timer").classList.remove('activeButton');
+                    }
+                    if (document.getElementById("timer").classList.contains('openButton')) {
+                        document.getElementById("timer").classList.remove('openButton');
+                    }
                     document.getElementById("timer").classList.add('expiredButton');
                     document.getElementById("article-content").removeChild(orderFormLink);
                 } else {
